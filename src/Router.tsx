@@ -12,12 +12,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <SteamIdInput />,
-    children: [
-      {
-        path: "player/:steamId",
-        element: <ProfileInfo />,
-      },
-    ],
+  },
+  {
+    path: "player/:steamId",
+    element: <ProfileInfo />,
   },
 ]);
 

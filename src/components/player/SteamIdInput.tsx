@@ -12,6 +12,7 @@ const SteamIdInput = () => {
       <NumberInput onChange={(e, val) => setSteamId(val)} value={steamId} />
       <Button
         onClick={() => {
+          console.log(steamId);
           navigate(`/player/${steamId}`);
         }}
       >
