@@ -1,6 +1,7 @@
 import React from "react";
 import App from "./App";
 import SteamIdInput from "./components/player/SteamIdInput.tsx";
+import ProfileInfo from "./components/player/ProfileInfo.tsx";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -10,15 +11,11 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-  },
-  {
-    path: "player",
     element: <SteamIdInput />,
     children: [
       {
         path: "player/:steamId",
-        element: <h2>steam</h2>,
+        element: <ProfileInfo />,
       },
     ],
   },
